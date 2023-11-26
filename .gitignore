@@ -4,12 +4,18 @@
 dist
 **/*.log
 node_modules
-theme/js
-theme/style.css
 vendor
 /wp-content/uploads/
 wp-config.php
 
+# Database
+db-data
+
 # IDE
 .idea/
 .vscode/
+
+# Wordpress Themes Default
+twentytwentyfour
+twentytwentythree
+twentytwentytwo
