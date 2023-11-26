@@ -8,6 +8,7 @@ theme/js
 theme/style.css
 vendor
 /wp-content/uploads/
+wp-config.php
 
 # IDE
 .idea/

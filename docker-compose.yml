@@ -2,26 +2,40 @@ version: '3'
 
 services:
   database:
-    image: mysql:5.7
-    volumes:
-      - db-data:/var/lib/mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: wordpress
-      MYSQL_USER: wordpress
-      MYSQL_PASSWORD: wordpress
-      MYSQL_RANDOM_ROOT_PASSWORD: demo
+    # We use a mariadb image which supports both amd64 & arm64 architecture
+    image: mariadb:10.6.16-focal
+    restart: unless-stopped
     ports:
       - 3306:3306
-    logging:
-      driver: none
+    env_file: .env
+    environment:
+      MYSQL_ROOT_PASSWORD: '${MYSQL_ROOT_PASSWORD}'
+      MYSQL_DATABASE: '${MYSQL_DATABASE}'
+      MYSQL_USER: '${MYSQL_USER}'
+      MYSQL_PASSWORD: '${MYSQL_PASSWORD}'
+    volumes:
+      - db-data:/var/lib/mysql
+
+  phpmyadmin:
+    depends_on:
+      - database
+    image: phpmyadmin/phpmyadmin
+    restart: unless-stopped
+    ports:
+      - 8081:80
+    env_file: .env
+    environment:
+      PMA_HOST: database
+      MYSQL_ROOT_PASSWORD: '${MYSQL_ROOT_PASSWORD}'
 
   wordpress:
     depends_on:
       - database
-    image: wordpress
-    volumes:
-      - ./:/var/www/html/
+    image: wordpress:6.4.1-php8.2-apache
+    restart: unless-stopped
+    ports:
+      - 8080:80
+    env_file: .env
     environment:
       WORDPRESS_DB_HOST: database
       WORDPRESS_DB_USER: wordpress
@@ -30,8 +44,8 @@ services:
       WORDPRESS_DEBUG: ${WORDPRESS_DEBUG}
       WORDPRESS_CONFIG_EXTRA: define('FS_METHOD', 'direct');
       VITE_DEV_SERVER_ADDRESS: ${VITE_DEV_SERVER_ADDRESS}
-    ports:
-      - 8080:80
+    volumes:
+      - ./wp-content/:/var/www/html/wp-content
 
 volumes:
   db-data: {}
