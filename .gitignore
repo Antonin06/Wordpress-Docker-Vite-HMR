@@ -6,6 +6,7 @@ dist
 node_modules
 vendor
 /wp-content/uploads/
+/wp-content/plugins/
 wp-config.php
 
 # Database

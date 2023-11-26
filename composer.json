@@ -1,0 +1,25 @@
+{
+  "name": "antonin23/wordpress-plugins",
+  "description": "Projet WordPress avec des plugins installés via Composer",
+  "type": "project",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "wpackagist-plugin/wordpress-seo": "^21.5"
+  },
+  "config": {
+    "vendor-dir": "wp-content/plugins",
+    "allow-plugins": {
+      "composer/installers": true
+    }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "ln -sfn ../../../../vendor wp-content/plugins"
+    ]
+  }
+}
