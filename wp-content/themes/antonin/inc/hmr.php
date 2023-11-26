@@ -62,25 +62,15 @@ if (!isViteHMRAvailable()) {
     return;
 }
 
-//add_filter(
-//    'stylesheet_uri', function () {
-//        return getViteDevServerAddress().'/wp-content/themes/antonin/sass/style.scss';
-//    }
-//);
-//
-//add_filter(
-//    'stylesheet_directory_uri', function () {
-//        return getViteDevServerAddress().'/wp-content/themes/antonin/sass';
-//    }
-//);
-
-const VITE_HMR_CLIENT_HANDLE = 'vite-client';
-// It's important we pass `null` as 4th parameter (version) so it does not
-// add the `version=X` query param. Passing that param breaks Vite SSR
-wp_enqueue_script(
-    VITE_HMR_CLIENT_HANDLE,
-    getViteDevServerAddress().'/@vite/client',
-    array(),
-    null
+add_filter(
+    'stylesheet_uri', function () {
+        return getViteDevServerAddress().'/wp-content/themes/antonin/sass/style.scss';
+    }
 );
-loadJSScriptAsESModule(VITE_HMR_CLIENT_HANDLE);
+
+add_filter(
+    'stylesheet_directory_uri', function () {
+        return getViteDevServerAddress().'/wp-content/themes/antonin/sass';
+    }
+);
+
