@@ -1,0 +1,14 @@
+# Project config
+.env
+
+dist
+**/*.log
+node_modules
+theme/js
+theme/style.css
+vendor
+/wp-content/uploads/
+
+# IDE
+.idea/
+.vscode/
