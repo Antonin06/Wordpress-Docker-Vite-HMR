@@ -39,3 +39,5 @@ npm run build && npm run dev
 |-------------------------------------|
 | ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FAntonin06%2FWordpress-Docker-Vite-HMR%2Fmain%2Fwp-content%2Fthemes%2Fantonin%2Fpackage.json&query=%24.devDependencies.vite&logo=vite&logoColor=%23646CFF&label=Vite)|
 | ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FAntonin06%2FWordpress-Docker-Vite-HMR%2Fmain%2Fwp-content%2Fthemes%2Fantonin%2Fpackage.json&query=%24.devDependencies.sass&logo=sass&logoColor=%23CC6699&label=Sass) |
+| ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FAntonin06%2FWordpress-Docker-Vite-HMR%2Fmain%2Fwp-content%2Fthemes%2Fantonin%2Fpackage.json&query=%24.devDependencies.chokidar&label=Chokidar) |
+| ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FAntonin06%2FWordpress-Docker-Vite-HMR%2Fmain%2Fwp-content%2Fthemes%2Fantonin%2Fpackage.json&query=%24.devDependencies.picocolors&label=Picocolors) |
