@@ -1,4 +1,3 @@
-// import { Plugin, ViteDevServer } from 'vite'
 import chokidar from 'chokidar'
 import colors from 'picocolors'
 import path from 'path'
