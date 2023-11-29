@@ -1,5 +1,5 @@
 // import { Plugin, ViteDevServer } from 'vite'
-import chokidar, { WatchOptions } from 'chokidar'
+import chokidar from 'chokidar'
 import colors from 'picocolors'
 import path from 'path'
 

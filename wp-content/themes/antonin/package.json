@@ -9,14 +9,18 @@
     "type": "git",
     "url": "https://github.com/Sumolari/wp-hmr-theme.git"
   },
+  "type": "module",
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build"
+    "build": "vite build",
+    "update": "npx npm-check-updates",
+    "upgrade": "npx npm-check-updates -u"
   },
   "devDependencies": {
     "chokidar": "^3.5.3",
+    "npm-check-updates": "^16.14.11",
     "picocolors": "^1.0.0",
-    "sass": "^1.56.1",
-    "vite": "^4.4.9"
+    "sass": "^1.69.5",
+    "vite": "^5.0.4"
   }
 }
