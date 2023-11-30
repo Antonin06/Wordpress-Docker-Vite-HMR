@@ -1,5 +1,29 @@
-$background-color: blue;
+$background-color: #ffd500;
 
 body {
   background: $background-color;
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+}
+
+main {
+  height: 100vh;
+}
+
+.intro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  img {
+    display: block;
+    width: 300px;
+    height: 100%;
+    object-fit: cover;
+    margin: auto;
+  }
+   h1 {
+     text-align: center;
+   }
 }

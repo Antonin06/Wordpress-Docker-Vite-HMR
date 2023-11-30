@@ -3,7 +3,10 @@ get_header();
 ?>
 
     <main>
-        <div>hello</div>
+        <div class="intro">
+            <img src="https://vitejs.dev/logo-with-shadow.png" alt="">
+            <h1>Lightning Fast Wordpress Theme</h1>
+        </div>
     </main>
 
 <?php

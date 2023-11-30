@@ -1,14 +1,8 @@
 {
   "name": "wp-hmr-theme",
   "version": "1.0.0",
-  "description": "A blank WordPress Theme with SASS, TypeScript and Hot Module Replacement (HMR) support",
-  "author": "Lluís Ulzurrun de Asanza i Sàez",
-  "license": "MIT",
-  "homepage": "https://github.com/Sumolari/wp-hmr-theme",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Sumolari/wp-hmr-theme.git"
-  },
+  "description": "A blank WordPress Theme with SASS and Hot Module Replacement (HMR) support",
+  "author": "Antonin Avon",
   "type": "module",
   "scripts": {
     "dev": "vite dev",
