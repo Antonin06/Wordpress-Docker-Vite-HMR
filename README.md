@@ -5,7 +5,7 @@
 </p>
 <br/>
 
-# Docker - Wordpress - Vite ⚡ - Composer
+# Docker - Wordpress - Vite ⚡ - Php Live Reload - Composer
 
 ## Installation
 
