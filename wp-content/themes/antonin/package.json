@@ -8,13 +8,29 @@
     "dev": "vite dev",
     "build": "vite build",
     "update": "npx npm-check-updates",
-    "upgrade": "npx npm-check-updates -u"
+    "upgrade": "npx npm-check-updates -u",
+    "prepare": "husky install",
+    "configure-husky": "npx husky install --git $(dirname $(dirname $(dirname $PWD)))/.git && npx husky add .husky/pre-commit \"npx --no-install lint-staged\""
   },
   "devDependencies": {
     "chokidar": "^3.5.3",
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
     "npm-check-updates": "^16.14.12",
     "picocolors": "^1.0.0",
+    "prettier": "^3.1.1",
     "sass": "^1.69.5",
     "vite": "^5.0.10"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,json}": ["eslint . --fix", "prettier --write ."]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
