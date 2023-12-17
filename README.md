@@ -11,6 +11,8 @@
 
 ```bash
 git clone https://github.com/Antonin06/Wordpress-Docker-Vite-HMR
+
+rm -rf .git
   
 composer install
 
