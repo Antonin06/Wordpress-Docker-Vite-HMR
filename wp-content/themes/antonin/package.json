@@ -10,7 +10,10 @@
     "update": "npx npm-check-updates",
     "upgrade": "npx npm-check-updates -u",
     "prepare": "husky install",
-    "configure-husky": "npx husky install --git $(dirname $(dirname $(dirname $PWD)))/.git && npx husky add .husky/pre-commit \"npx --no-install lint-staged\""
+    "configure-husky": "npx husky install --git $(dirname $(dirname $(dirname $PWD)))/.git && npx husky add .husky/pre-commit \"npx --no-install lint-staged\"",
+    "lint-staged": {
+      "**/*.{js,jsx,json}": ["eslint . --fix", "prettier --write ."]
+    }
   },
   "devDependencies": {
     "chokidar": "^3.5.3",
@@ -24,9 +27,6 @@
     "prettier": "^3.1.1",
     "sass": "^1.69.5",
     "vite": "^5.0.10"
-  },
-  "lint-staged": {
-    "**/*.{js,jsx,json}": ["eslint . --fix", "prettier --write ."]
   },
   "husky": {
     "hooks": {
